@@ -1,0 +1,15 @@
+<%- include("partials/header.ejs") %>
+<div class="container maincontainer d-flex justify-content-center align-items-center">
+    <form action="/register" method="post" class="form">
+    <h1>Register</h1>
+    
+        <input type="text" placeholder="enter name" name="name" class="form-control my-2 p-2">
+        <input type="text" placeholder="enter email" name="email" class="form-control my-2 p-2">
+        <input type="password" placeholder="enter password" name="password" class=" my-2 p-2 form-control">
+        <button class="btn btn-dark" type="submit">register</button>
+
+
+    </form>
+</div>
+
+<%- include("partials/footer.ejs") %>

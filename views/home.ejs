@@ -1,14 +1,23 @@
 <%- include("partials/header.ejs") %>
-<div class="container maincontainer d-flex justify-content-center align-items-center">
-    <form action="/login" method="post" class="form">
-    <h1>Login</h1>
 
-        <input type="text" placeholder="enter email" name="email" class="form-control my-2 p-2">
-        <input type="password" placeholder="enter password" name="password" class=" my-2 p-2 form-control">
-        <button class="btn btn-dark" type="submit">Login</button>
+<div class="maincontainer d-flex justify-content-center align-items-center">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Shhh! secrets</h1>
+          <p class="lead">Dont keep your secrets to your self share with us secretly!!</p>
+        </div>
+      </div>
+      <div class="button d-flex p-5">
+        <a href="/login" ><button class="btn btn-dark m-3 px-4">Login</button></a>
+        <a href="/register"><button class="btn btn-dark m-3">Register</button></a>
+
+      </div>
 
 
-    </form>
+
+
+
 </div>
+
 <%- include("partials/footer.ejs") %>
 
