@@ -12,7 +12,9 @@ app.get("/",(req,res)=>{
     res.render('home');
 })
 
-
+app.post("/login",(req,res)=>{
+    res.send("welcome")
+})
 const port=process.env.PORT || 3000;
 
 app.listen(port,()=>{
