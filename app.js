@@ -1,6 +1,7 @@
 const express=require("express");
 const bodyParser=require("body-parser");
 const { default: mongoose } = require("mongoose");
+const encrypt=require('mongoose-encryption');
 require("dotenv").config();
 // const ejs=require("ejs");
 const app=express();
@@ -20,6 +21,8 @@ const userschema=new mongoose.Schema({
     
 })
 
+const secret="thisislukmaannadaf";
+userschema.plugin(encrypt,{secret:secret,encryptedFields:['password']});
 const newuser=mongoose.model("user",userschema);
 
 
