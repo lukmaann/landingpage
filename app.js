@@ -79,7 +79,7 @@ app.get("/secrets",(req,res)=>{
     res.render("secrets");
 
   }else{
-    res.redirect("/")
+    res.redirect("/login")
   }
 })
 
@@ -88,18 +88,17 @@ app.post("/login",(req,res)=>{
     username:req.body.email,
     password:req.body.password
   })
-
+  
   req.login(user,(err)=>{
-    console.log("hello")
     if(err){
       console.log(err);
-      res.redirect('/')
+      res.redirect("/");
+    }else{
+      res.redirect("/secrets")
     }
-      passport.authenticate("local")(req,res,()=>{
-        res.redirect("/secrets")
-      })
-    
   })
+
+
 })
 
 app.post("/register",(req,res)=>{
