@@ -132,7 +132,7 @@ app.post("/register",(req,res)=>{
 
 
 // ----------------------------------------listening at------------------------
-const port=process.env.PORT || 3000;
+const port=process.env.PORT || 300;
 
 app.listen(port,()=>{
     console.log("server started at "+port);
